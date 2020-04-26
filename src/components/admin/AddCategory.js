@@ -51,7 +51,7 @@ const AddCategory = () => {
 
     const showSuccess = () => (
         <div className="alert alert-info" style={{display: success ? '' : 'none'}} >
-            {name} category created successfully!!!
+            <strong>{name}</strong> category created successfully!!!
         </div>
     )
 
@@ -62,7 +62,7 @@ const AddCategory = () => {
     );
 
     return (
-        <Layout title="Add new category" description={`Hello ${user.name} !!!`}>
+        <Layout title="Add new category" description={`Hello ${user.name} !!!`} className="container">
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showSuccess()}
