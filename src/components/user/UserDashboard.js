@@ -1,0 +1,91 @@
+import React from 'react'
+import Layout from '../core/Layout';
+import {isAuthenticated} from '../../api/auth/index';
+import {Link} from 'react-router-dom';
+
+const UserDashboard = () => {
+
+    const {user: {name, email, role}} = isAuthenticated();
+
+    const userLinks = () => {
+        return (
+            <div className="card">
+                <h4 className="card-header">User Links</h4>
+                <ul className="list-group">
+                    <li className="list-group-item">
+                        <Link className="nav-link" to="/cart">My Cart</Link>
+                    </li>
+                    <li className="list-group-item">
+                        <Link className="nav-link" to="/profile/update">Update Profile</Link>
+                    </li>
+                </ul>
+            </div>
+        )
+    }
+
+    const userInfo = () => {
+        return (
+            <div className="card mb-5">
+                <h3 className="card-header">User Information</h3>
+                <table className="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td>{name}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td>{email}</td>
+                        </tr>
+                        <tr style={{paddingBottom: '0px'}}>
+                            <th scope="row">Role</th>
+                            <td>{role === 1 ? 'Admin' : 'Registered User'}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        )
+    }
+
+    const purchaseHistory = () => {
+        return (
+            <div className="card mb-5">
+                <h3 className="card-header">Purchase History</h3>
+                <table className="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Date of Purchase</th>
+                            <th scope="col">Description</th>
+                            {/* <th scope="col">#</th> */}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1.</th>
+                            <td>26th April 2020</td>
+                            <td>Lorem ipsum dolor sit amet, quos harum autem natus?</td>
+                            {/* <td></td> */}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        );
+    }
+
+    return (
+        <Layout title="Dashboard" description={`Hello ${name} !!!`} className="container-fluid">
+            <div className="row">
+                <div className="col-3">{userLinks()}</div>
+                <div className="col-9">
+                    {userInfo()}
+                    {purchaseHistory()}
+                </div>
+            </div>
+            
+            
+        </Layout>
+    )
+}
+
+export default UserDashboard;
