@@ -6,6 +6,7 @@ const ShowImage = ({item, url}) => (
         src={`${API}/${url}/photo/${item._id}`} 
         alt={item.name} 
         className="card-img-top"   
+        style={{maxHeight: '300px', maxWidth: '100%'}}
     />
     // <div className="product-img">
     //     <img 

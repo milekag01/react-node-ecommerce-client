@@ -11,7 +11,7 @@ const Card = ({product}) => {
                 <ShowImage item={product} url="product" />
                 <div className="card-body">
                     <h4 className="card-title">{product.name}</h4>
-                    <p className="card-text">{product.description.substring(0, 50)}</p>
+                    <p className="card-text">{product.description.substring(0, 80)}...</p>
                     <h6>&#8377; {product.price}</h6>
                 
                     <Link to='/'>

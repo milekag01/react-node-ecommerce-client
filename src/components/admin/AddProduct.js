@@ -3,6 +3,7 @@ import Layout from '../core/Layout';
 import {isAuthenticated} from '../../api/auth/index';
 import {Link} from 'react-router-dom';
 import {createProduct, getCategories} from '../../api/apiAdmin';
+// import Resizer from 'react-image-file-resizer';
 
 const AddProduct = () => {
 
@@ -57,6 +58,23 @@ const AddProduct = () => {
 
     const handleChange = name => event => {
         const value = name === 'photo' ? event.target.files[0] : event.target.value;
+        // resize image
+        // const value = '';
+        // if(name==='photo') {
+        //     Resizer.imageFileResizer(
+        //         event.target.files[0],
+        //         250,
+        //         250,
+        //         'JPEG',
+        //         100,
+        //         0,
+        //         uri => {
+        //             value = uri
+        //         }, 'base64'
+        //     );
+        // } else {
+        //     value = event.target.value;
+        // }
         formData.set(name, value);
         setValues({...values, [name]: value, error: ''});
     }
@@ -77,7 +95,7 @@ const AddProduct = () => {
                     quantity: '',
                     price: '',
                     error: '',
-                    formData: '',
+                    // formData: '',
                     loading: false,
                     createdProduct: data
                 })

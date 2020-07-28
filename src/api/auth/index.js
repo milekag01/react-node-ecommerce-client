@@ -1,4 +1,5 @@
 import {API} from '../../config';
+// import {API} from '../../config';
 
 export const signup = (user) => {
     // console.log(user);
