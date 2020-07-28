@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Layout from './Layout';
 import {getProducts} from '../../api/apiCore';
 import Card from './Card';
+import Search from './Search';
 
 const Home = () => {
 
@@ -36,6 +37,7 @@ const Home = () => {
 
     return (
         <Layout title="Home" description="Vesper: E-Commerce Web App" className="container">
+            <Search />
             <h2 className="mb-4">Best Sellers</h2>
             <div className="row">
                 {productsBySell.map((product,i) => (
