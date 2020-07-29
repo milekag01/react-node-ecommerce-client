@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import { getCart } from './cartHelpers';
 import Card from './Card';
+import Checkout from '../core/Checkout';
 
 const Cart = () => {
     const [items, setItems] = useState([]);
-    // const [run, setRun] = useState(false);
+    const [run, setRun] = useState(false);
 
     useEffect(() => {
         setItems(getCart());
-    }, [items]);
+    }, [run]);
 
     const showItems = items => {
         return (
@@ -24,6 +25,8 @@ const Cart = () => {
                         showAddToCartButton={false}
                         cartUpdate={true}
                         showRemoveProductButton={true}
+                        setRun={setRun}
+                        run={run}
                     />
                 ))}
             </div>
@@ -48,7 +51,7 @@ const Cart = () => {
                 <div className="col-6">
                     <h2 className="mb-4">Your cart summary</h2>
                     <hr />
-                    
+                    <Checkout products={items} setRun={setRun} run={run} />
                 </div>
             </div>
         </Layout>
