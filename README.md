@@ -5,7 +5,7 @@
 ## Overview
 ### Technologies
 
-For frontend, we will mainly work upon *React* for components along with *Sass* and some other frontend and UI libraries. This challenge is a perfect starting point.
+For frontend, we will mainly work upon [React](https://reactjs.org/docs/getting-started.html) for components along with [Sass](https://sass-lang.com/documentation) and some other frontend and UI libraries.
 
 ### Learning Outcomes
 * This project will take a bit of layout planning, so you will need some time, in the beginning, to think it through.
@@ -74,4 +74,24 @@ The project structure is predefined and is in sync with backend. We will mainly 
 │       ├── Signup.js
 │       └── UserDashboard.js
 └── yarn.lock
+```
+### Build
+
+**PS:** Go through installation of Server code before setting up this repository [Server](https://github.com/milekag01/react-node-ecommerce).
+
+
+To clone and run this project, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
+
+```code
+# clone this repository
+$ git clone https://github.com/milekag01/react-node-ecommerce-client.git
+
+# Go into the repository
+cd react-node-ecommerce-client
+
+# Install dependencies
+npm install
+
+# Start
+npm run start
 ```
