@@ -103,7 +103,7 @@ const Orders = () => {
                 <div className="col-md-8 offset-md-2">
                     {showOrdersLength()}
 
-                    {orders.map((o, oIndex) => {
+                    {orders.slice(0).reverse().map((o, oIndex) => {
                         return (
                             <div
                                 className="mt-5"
