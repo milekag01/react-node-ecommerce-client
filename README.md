@@ -97,9 +97,13 @@ npm run start
 ```
 
 For Admin Login credentials:
+
 **Id:** milek@gmail.com
+
 **Password:** qwerty123
 
 For Placing the order, use Test Card Details:
+
 **Card no.:** 4012000077777777
+
 **Date**: Any
