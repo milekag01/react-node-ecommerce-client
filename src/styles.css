@@ -2,33 +2,32 @@
   border-radius: 0px;
 }
 
-/* cart badge*/
+/* cart badge */
 .cart-badge {
   border-radius: 20%;
   padding: 2px;
   font-size: 14px;
+  background: #fff;
+  color: #000;
+}
+.cart-badge:hover {
+  border-radius: 20%;
+  padding: 2px;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
 }
 
-/* font-style: italic;*/
- * background: #fff
- * color: #000
- *
- * &:hover
- *  border-radius: 20%
- *  padding: 2px
- *  font-size: 14px
- *
- *  /* font-style: italic;*/
- *  background: #fff
- *  color: #000 */
-/* single product page - product name */
+/**
+ * single product page - product name
+ */
 .name {
   background: indigo;
   color: #fff;
   font-weight: bold;
 }
 
-/* black shade form 10-1*/
+/* black shade form 10-1 */
 .black-10 {
   background: #f2f2f2;
   border-radius: 10px;
