@@ -118,3 +118,36 @@
       background-position: 0% 50%;
     }
   }
+
+  /* grid */
+  .grid {
+    max-width: 450px;
+    margin: 15px;
+    background-color:#ebebeb !important;
+  } 
+
+  .grid-collection {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    margin: 10px 10px;
+    padding: 95px 180px;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .btn-card {
+    color: white !important;
+    background-color: #249de3 !important;
+    border-radius: 20% !important;
+  }
+
+  .pagination-col {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    color: #249de3 !important;
+  }
